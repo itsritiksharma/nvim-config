@@ -27,16 +27,21 @@ vim.keymap.set("n", "<leader>S", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><
 vim.keymap.set("n", "<Esc>", "<Esc>:noh<CR>", { noremap = true, silent= true})
 vim.keymap.set("n", "<Tab>", "gt")
 vim.keymap.set("n", "<S-Tab>", "gT")
-vim.keymap.set("n", "<leader>x", ":tabclose<Enter>")
-vim.keymap.set("n", "<leader>f", ":tabs<Enter>")
+vim.keymap.set("n", "<leader>x", ":tabclose<CR>")
+vim.keymap.set("n", "<leader>f", ":tabs<CR>")
 vim.keymap.set("n", "<leader>t", ":tabedit ")
+vim.keymap.set("n", "<leader>r", vim.cmd.SnipRun)
+vim.keymap.set("n", "<C-a>", vim.cmd.SnipClose)
+
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- Visual mode
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>d", "\"_d")
-vim.keymap.set("v", "<leader>9", "ab<Enter>")
-vim.keymap.set("v", "<leader>[", "aB<Enter>")
+vim.keymap.set("v", "<leader>9", "ab<CR>")
+vim.keymap.set("v", "<leader>[", "aB<CR>")
+vim.keymap.set("v", "<leader>r", vim.cmd.SnipRun)
+vim.keymap.set("v", "<C-a>", vim.cmd.SnipClose)
 
 -- X mode
 vim.keymap.set("x", "<leader>p", "\"_dp")

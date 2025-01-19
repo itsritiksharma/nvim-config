@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 vim.g.localmapleader = "\\"
+vim.g.blamer_enabled = true
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
