@@ -1,5 +1,5 @@
-require("ritik.remap")
 require("ritik.set")
+require("ritik.remap")
 
 -- Setup lazy.nvim
 local lazyconfig = require("ritik.configs.lazy")

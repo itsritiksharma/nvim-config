@@ -9,8 +9,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- Vim keymaps
 -- Normal mode
-vim.keymap.set("n", ";", ":")
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+vim.keymap.set("n", ";", ":")
 vim.keymap.set("n", "<C-j>", ":m .+1<CR>==", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-k>", ":m .-2<CR>==", { noremap = true, silent = true })
 vim.keymap.set("n", "J", "mzJ`z")
@@ -22,12 +22,21 @@ vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<leader>s", ":%s/\\<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>S", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left>]])
+vim.keymap.set("n", "<Esc>", "<Esc>:noh<CR>", { noremap = true, silent= true})
+vim.keymap.set("n", "<Tab>", "gt")
+vim.keymap.set("n", "<S-Tab>", "gT")
+vim.keymap.set("n", "<leader>x", ":tabclose<Enter>")
+vim.keymap.set("n", "<leader>f", ":tabs<Enter>")
+vim.keymap.set("n", "<leader>t", ":tabedit ")
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- Visual mode
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>d", "\"_d")
+vim.keymap.set("v", "<leader>9", "ab<Enter>")
+vim.keymap.set("v", "<leader>[", "aB<Enter>")
 
 -- X mode
 vim.keymap.set("x", "<leader>p", "\"_dp")
@@ -38,18 +47,5 @@ vim.keymap.set("i", "<C-j>", "<Down>")
 vim.keymap.set("i", "<C-k>", "<Up>")
 vim.keymap.set("i", "<C-h>", "<Left>")
 vim.keymap.set("i", "<C-l>", "<Right>")
-vim.keymap.set("i", "<C-j>", ":m >+1<CR>gv=gv", { noremap = true, silent = true })
-
-
-
-
-
-
-
-
-
-
-
-
-
+-- vim.keymap.set("i", "<C-j>", ":m >+1<CR>gv=gv", { noremap = true, silent = true })
 

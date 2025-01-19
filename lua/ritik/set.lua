@@ -1,28 +1,26 @@
-local opt = vim.opt
-
-opt.nu = true
-opt.relativenumber = true
-
-opt.tabstop = 4
-opt.softtabstop = 4
-opt.shiftwidth = 4
-opt.expandtab = false
-
-opt.smartindent = true
-
-opt.swapfile = false
-opt.backup = false
-opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-
-opt.hlsearch = true
-opt.incsearch = true
-
-opt.updatetime = 50
-
-opt.colorcolumn = "80"
-
-opt.scrolloff = 10
-
 vim.g.mapleader = " "
 vim.g.localmapleader = "\\"
+
+vim.opt.nu = true
+vim.opt.relativenumber = true
+
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = false
+
+vim.opt.smartindent = true
+
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
+
+vim.opt.updatetime = 50
+
+vim.opt.colorcolumn = "80"
+
+vim.opt.scrolloff = 10
 
