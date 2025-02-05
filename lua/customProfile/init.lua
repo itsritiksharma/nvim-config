@@ -1,8 +1,8 @@
-require("ritik.set")
-require("ritik.remap")
+require("customProfile.set")
+require("customProfile.remap")
 
 -- Setup lazy.nvim
-local lazyconfig = require("ritik.configs.lazy")
+local lazyconfig = require("customProfile.configs.lazy")
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -21,4 +21,4 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("ritik.plugins",lazyconfig)
+require("lazy").setup("customProfile.plugins",lazyconfig)
