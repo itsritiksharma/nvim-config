@@ -8,6 +8,9 @@ local actions = require("telescope.actions")
 
 telescope.setup({
   defaults = {
+    preview = {
+      treesitter = false,
+    },
     mappings = {
       i = {
         ["<esc>"] = actions.close,

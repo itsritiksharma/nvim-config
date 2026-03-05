@@ -23,18 +23,15 @@ return {
 
   -- Third party
   { "nvim-lua/plenary.nvim" },
-  { "ThePrimeagen/harpoon" },
+  { "ThePrimeagen/harpoon", branch = "harpoon2", dependencies = { "nvim-lua/plenary.nvim" } },
   { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
   -- Treesitter for syntax highlighting
   { 
     "nvim-treesitter/nvim-treesitter", 
     build = ":TSUpdate",
     config = function()
-      require("nvim-treesitter.configs").setup({
+      require("nvim-treesitter").setup({
         ensure_installed = { "javascript", "typescript", "tsx", "lua", "python", "json", "html", "css" },
-        highlight = { enable = true },
-        incremental_selection = { enable = true },
-        indent = { enable = true },
       })
     end
   },
