@@ -1,0 +1,7 @@
+require("config.remap")
+require("config.lsp")
+require("config.cmp")
+require("config.formatting")
+require("config.harpoon")
+require("config.telescope")
+require("config.gitsigns")
